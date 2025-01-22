@@ -41,8 +41,12 @@ public class Game {
         @Column(columnDefinition = "TEXT")
         private String longDescription;
 
+        // Constructor vazio (sem argumentos) para que o JPA mapeie os objetos Java para o banco de dados no processo de deserialização.
 
-        // Constructor para instanciar a classe 
+        public Game(){
+        }
+
+        // Constructor com parâmetros para instanciar a classe 
 
         public Game(Long id, String title, Integer year,
          String genre, String platforms, Double score, String imgUrl, 
